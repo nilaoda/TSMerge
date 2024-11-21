@@ -3,7 +3,7 @@ using System.Diagnostics;
 using static TSMerge.Utils;
 
 var inputOption = new Option<string[]>("-i", description: "Add inputs") { IsRequired = true, Arity = ArgumentArity.OneOrMore, AllowMultipleArgumentsPerToken = false, ArgumentHelpName = "FILE" };
-var patternSizeOption = new Option<double>("-p", description: "Pattern size to search (in MB)", getDefaultValue: () => 10) { Arity = ArgumentArity.ExactlyOne, ArgumentHelpName = "SIZE" };
+var patternSizeOption = new Option<double>("-p", description: "Pattern size to search (in MB)", getDefaultValue: () => 1) { Arity = ArgumentArity.ExactlyOne, ArgumentHelpName = "SIZE" };
 var outputArgument = new Argument<string>(name: "OUTPUT", description: "File output name");
 var rootCommand = new RootCommand("Merge MPEG-TS files into one") { inputOption, outputArgument, patternSizeOption };
 rootCommand.SetHandler(DoWork, inputOption, outputArgument, patternSizeOption);

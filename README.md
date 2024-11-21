@@ -15,7 +15,7 @@ Arguments:
 
 Options:
   -i <FILE> (REQUIRED)  Add inputs
-  -p <SIZE>             Pattern size to search (in MB) [default: 10]
+  -p <SIZE>             Pattern size to search (in MB) [default: 1]
   --version             Show version information
   -?, -h, --help        Show help and usage information
 ```

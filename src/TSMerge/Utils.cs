@@ -41,7 +41,7 @@ internal static class Utils
     {
         int patternSize = (int)(patternSizeInMb * 1024 * 1024); // n MB
 
-        // Step 1: Read the first 10 MB of B.ts
+        // Step 1: Read the first n MB of B.ts
         using var fsB = new FileStream(fileB, FileMode.Open, FileAccess.Read);
         var readSize = (int)Math.Min(patternSize, fsB.Length);
         var searchPattern = new byte[readSize];
