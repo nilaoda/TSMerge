@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Get Date in UTC+8
         id: get_date
-        run: echo "::set-output name=date::$(date -u -d '8 hours' +'%Y%m%d')"
+        run: echo "date=$(date -u -d '8 hours' +'%Y%m%d')" >> "$GITHUB_OUTPUT"
 
   build-win-x64-arm64:
     runs-on: windows-latest
